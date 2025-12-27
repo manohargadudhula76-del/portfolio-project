@@ -1,0 +1,41 @@
+.sec6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  gap: 30px;
+}
+
+/* Footer menu */
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li a {
+  font-weight: 600;
+  color: black;
+}
+
+/* Copyright */
+.sec6 span {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    text-align: center;
+  }
+
+  .sec6 span {
+    font-size: 10px;
+  }
+}

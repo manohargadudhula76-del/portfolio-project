@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* 🔥 prevents right scroll */
+  font-family: "Poppins", sans-serif;
+}
+html {
+    scroll-behavior:smooth ;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: rgb(43, 126, 126);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+/* ===== DESKTOP NAVBAR ===== */
+.navbar {
+  height: 70px;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgb(41, 208, 227);
+}
+
+.menu-bar {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+}
+
+.menu-bar li a {
+  font-size: 18px;
+}
+
+/* ===== MOBILE NAVBAR ===== */
+.navbar-menu {
+  display: none;
+}
+
+/* hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+@keyframes appear {
+    from{
+       opacity: 0;
+       transform: translateX(-200px);
+    }
+    to {
+       opacity: 1;
+       transform: translateX(0px);
+    }
+}
+.sec1, .sec2, .sec3, .sec4, .sec5 {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sec-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* ===== TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+    .sec-1 {
+    padding-top: 100px; /
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  /* mobile top bar */
+  .navbar-menu {
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* menu overlay */
+  .navbar-menu .menu-bar {
+    position: fixed;       /* 🔥 FIXED OVERLAY */
+    top: 70px;
+    right: 20px;
+
+    background: rgb(18, 120, 120);
+    border-radius: 12px;
+    padding: 20px;
+
+    display: none;
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    gap: 15px;
+
+    z-index: 100;
+  }
+
+  .navbar-menu.active .menu-bar {
+    display: grid;
+  }
+
+  .menu-bar li {
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
