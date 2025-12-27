@@ -75,20 +75,22 @@ a:hover {
 .sec1, .sec2, .sec3, .sec4, .sec5 {
   opacity: 0;
   transform: translateX(-200px);
-  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:0.8s ease;
 }
 
 .sec-show {
   opacity: 1;
   transform: translateX(0);
 }
+ 
+
 
 
 
 /* ===== TABLET & MOBILE ===== */
 @media (max-width: 768px) {
     .sec-1 {
-    padding-top: 100px; /
+    padding-top: 100px; 
   }
 
   .navbar {
@@ -118,7 +120,7 @@ a:hover {
 
   /* menu overlay */
   .navbar-menu .menu-bar {
-    position: fixed;       /* 🔥 FIXED OVERLAY */
+    position: fixed;      
     top: 70px;
     right: 20px;
 
@@ -144,4 +146,17 @@ a:hover {
     text-align: center;
     font-weight: 600;
   }
+  .sec1,
+  .sec2,
+  .sec3,
+  .sec4,
+  .sec5 {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+
+  
 }
+
+  
