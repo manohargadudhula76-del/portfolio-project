@@ -1,3 +1,17 @@
+/* ===============================
+   GLOBAL WEBSITE BACKGROUND
+   =============================== */
+
+body {
+  background: linear-gradient(
+    135deg,
+    rgba(19, 144, 158, 0.12),
+    rgba(255, 255, 255, 0.9)
+  );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ===== RESET ===== */
@@ -8,11 +22,12 @@
 }
 
 html, body {
-  overflow-x: hidden; /* 🔥 prevents right scroll */
+  overflow-x: hidden; /* prevents right scroll */
   font-family: "Poppins", sans-serif;
 }
+
 html {
-    scroll-behavior:smooth ;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -39,7 +54,7 @@ a:hover {
 .logo {
   font-size: 30px;
   font-weight: 600;
-  color: rgb(41, 208, 227);
+  color: rgb(19, 144, 158);
 }
 
 .menu-bar {
@@ -57,36 +72,65 @@ a:hover {
   display: none;
 }
 
-/* hamburger hidden on desktop */
 .hamburger {
   display: none;
   cursor: pointer;
 }
 
- 
+/* ===============================
+   HERO SECTION (DESKTOP)
+   =============================== */
 
+.sec-1 {
+  min-height: 100vh;
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
 
+.sec-1-1 {
+  order: 2;
+}
 
+.sec-1-2 {
+  order: 1;
+  max-width: 600px;
+}
 
-/* ===== TABLET & MOBILE ===== */
+.sec-1-2 p {
+  text-align: justify;
+  line-height: 1.8;
+  margin-top: 15px;
+  color: #333;
+}
+
+.profile-img {
+  width: 280px;
+  border-radius: 50%;
+}
+
+/* ===============================
+   TABLET & MOBILE NAVBAR
+   =============================== */
 @media (max-width: 768px) {
-    .sec-1 {
-    padding-top: 100px; 
+
+  .sec-1 {
+    padding-top: 100px;
   }
 
   .navbar {
     display: none;
   }
 
-  /* mobile top bar */
   .navbar-menu {
-    position: fixed;       
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: white;
     z-index: 1000;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,20 +143,16 @@ a:hover {
     cursor: pointer;
   }
 
-  /* menu overlay */
   .navbar-menu .menu-bar {
-    position: fixed;      
+    position: fixed;
     top: 70px;
     right: 20px;
-
     background: rgb(18, 120, 120);
     border-radius: 12px;
     padding: 20px;
-
     display: none;
     grid-template-columns: repeat(2, minmax(120px, 1fr));
     gap: 15px;
-
     z-index: 100;
   }
 
@@ -127,10 +167,32 @@ a:hover {
     text-align: center;
     font-weight: 600;
   }
-  
 
-  
+  .sec-1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 40px;
+  }
+
+  .sec-1-1,
+  .sec-1-2 {
+    order: unset;
+  }
+
+  .sec-1-2 p {
+    text-align: justify;
+  }
 }
+
+/* ===============================
+   SECTION-2 (ABOUT) – JUSTIFY PARAGRAPH
+   =============================== */
+
+.sec-2-2-2 .p1 {
+  text-align: justify;
+  line-height: 1.8;
+}
+
 /* ===============================
    SCROLL ANIMATION – ALL SECTIONS
    =============================== */
@@ -147,13 +209,12 @@ a:hover {
   will-change: opacity, transform;
 }
 
-/* when section becomes visible */
 .show-section {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Mobile optimization */
+/* Mobile animation optimization */
 @media (max-width: 768px) {
   .sec-1,
   .sec2,
@@ -165,5 +226,10 @@ a:hover {
     transition: opacity 0.7s ease, transform 0.7s ease;
   }
 }
+
+
+
+
+
 
   
