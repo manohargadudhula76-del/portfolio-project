@@ -131,5 +131,39 @@ a:hover {
 
   
 }
+/* ===============================
+   SCROLL ANIMATION – ALL SECTIONS
+   =============================== */
+
+.sec-1,
+.sec2,
+.sec3,
+.sec4,
+.sec5,
+.sec6 {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  will-change: opacity, transform;
+}
+
+/* when section becomes visible */
+.show-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .sec-1,
+  .sec2,
+  .sec3,
+  .sec4,
+  .sec5,
+  .sec6 {
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+}
 
   
