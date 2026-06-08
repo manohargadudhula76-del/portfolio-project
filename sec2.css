@@ -18,18 +18,25 @@
 /* Main content */
 .sec-2-2 {
   display: flex;
-  align-items: flex-start;        /* image aligns with top */
+  align-items: flex-start;
   justify-content: center;
   gap: 50px;
   margin-top: 60px;
 }
 
 /* ABOUT IMAGE */
+.sec-2-2-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sec-2-2-1 img {
   width: 230px;
-  height: 230px;                 /* 🔥 important for circle */
+  height: 230px;
   border-radius: 50%;
-  object-fit: cover;             /* 🔥 prevents oval */
+  object-fit: cover;
+  object-position: center top;   /* fixes head cutting */
   flex-shrink: 0;
   display: block;
 }
@@ -83,12 +90,12 @@
 /* ABOUT PARAGRAPH */
 .p1 {
   width: 100%;
-  text-align: justify;            /* 🔥 FIXED */
+  text-align: justify;
   margin-top: 10px;
 }
 
 /* ===============================
-   RESPONSIVE (TABLET & MOBILE)
+   RESPONSIVE
    =============================== */
 
 @media (max-width: 1024px) {
@@ -97,15 +104,30 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 35px;
+    margin-top: 30px;
+  }
+
+  .sec-2-2-1 img {
+    width: 220px;
+    height: 220px;
+    object-position: center top;
   }
 
   .sec-2-2-2-1 {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
   .sec-2-2-2 {
     align-items: center;
+    width: 100%;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 330px;
   }
 
   .p1 {

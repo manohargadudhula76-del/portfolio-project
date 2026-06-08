@@ -28,16 +28,17 @@
 .sec-4-1 >:nth-child(1) {
     font-weight: 600;
 }
-.sec-4-2 {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-
+.sec-4-2{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    justify-content:center;
+    width:100%;
 }
 
 .box3{
-    width: 320px;
+    width:100%;
+    max-width:320px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -70,10 +71,11 @@
         flex-direction: column;
         padding-bottom:100px ;
     }
-    .box3 {
-        width:90%;
-        gap: 20px;
-    }
+   .box3{
+    width:100%;
+    max-width:320px;
+    margin:0 auto;
+}
     .box3 img {
         width:100%;
     }
@@ -83,7 +85,9 @@
 
     }
 }
-
+*{
+    box-sizing:border-box;
+}
 
 
     
